@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قريبًا - مبادرة مَقعد</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom right, #d6f0ff, #f3fcff);
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      z-index: 2;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 250px;
+      margin: 0 auto 30px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #007a8b;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* نقاط التحميل */
+    .dots-loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dots-loading span {
+      width: 10px;
+      height: 10px;
+      background-color: #007a8b;
+      border-radius: 50%;
+      display: inline-block;
+      animation: blink 1.4s infinite both;
+    }
+
+    .dots-loading span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .dots-loading span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes blink {
+      0%, 80%, 100% {
+        transform: scale(0);
+        opacity: 0.3;
+      }
+      40% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* الخلفية الجانبية */
+    .corner-icon {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      opacity: 0.07;
+      animation: floatIcon 4s ease-in-out infinite;
+    }
+
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .corner-icon {
+        width: 70px;
+        height: 70px;
+      }
+
+      .dots-loading span {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- رمز الخلفية -->
+  <img src="https://cdn-icons-png.flaticon.com/512/201/201818.png" alt="رمز مقعد" class="corner-icon" />
+
+  <!-- المحتوى -->
+  <div class="container">
+    <img src="images/Logo.png" alt="MAQAAD Logo" class="logo">
+    <h1>قريبًا - مبادرة مَقعد</h1>
+    <p>لأن سعادتهم في سلامتهم... قريبًا ننطلق برسالة توعوية لحماية أطفالنا باستخدام مقعد السيارة المخصص لهم.</p>
+    <div class="dots-loading">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+</body>
+</html>
